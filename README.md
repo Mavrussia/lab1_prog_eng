@@ -248,9 +248,14 @@ def unique_sorted_tuple(lst):
 
 ## Код
 ```python
+def unique_sorted_tuple(lst):
+    return tuple(sorted(set(lst)))
+
+
 print(unique_sorted_tuple([3, 1, 2, 3, 4, 1]))
 print(unique_sorted_tuple([5, 5, 5, 5]))
 print(unique_sorted_tuple([9, 8, 7, 6]))
+
 ```
 
 ### Результат.
