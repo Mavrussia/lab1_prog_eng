@@ -178,7 +178,8 @@ print(longest_words('input.txt'))
 ```
 
 ### Результат.
-![image](https://github.com/user-attachments/assets/cc4df3ea-e58d-4708-bf35-a9ec024998c6)
+![image](https://github.com/user-attachments/assets/fa6c472b-aa20-4a2a-a87c-9a061944d121)
+
 
 ## Лабораторная работа №10
 ### Требуется создать csv-файл «rows_300.csv» со следующими
