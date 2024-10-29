@@ -43,8 +43,8 @@ my_car = Car("Toyota", "Corolla")
 class Car:
 
     def __init__(self, make, model):
-        self.make = make  # Атрибут make устанавливается в значение параметра make (производитель)
-        self.model = model  # Атрибут model устанавливается в значение параметра model (модель)
+        self.make = make
+        self.model = model 
 
 
     def drive(self):
