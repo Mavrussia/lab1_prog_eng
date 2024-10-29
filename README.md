@@ -24,12 +24,15 @@
 комментариями.
 
 ```python
+# Создаем класс под названием Car (Машина)
 class Car:
+    # Конструктор метод __init__ вызывается при создании объекта класса.
+    # Он инициализирует атрибуты 'make' (производитель) и 'model' (модель) значениями, переданными в параметры.
     def __init__(self, make, model):
-        self.make = make
-        self.model = model
+        self.make = make  # Атрибут 'make' устанавливается в значение параметра 'make' (производитель).
+        self.model = model  # Атрибут 'model' устанавливается в значение параметра 'model' (модель).
 
-
+# Создаем объект 'my_car' класса Car, у которого производитель 'Toyota', а модель 'Corolla'
 my_car = Car("Toyota", "Corolla")
 ```
 
@@ -41,18 +44,19 @@ my_car = Car("Toyota", "Corolla")
 
 ```python
 class Car:
-
+    # Конструктор класса Car, который инициализирует два атрибута: make (производитель) и model (модель)
     def __init__(self, make, model):
-        self.make = make
-        self.model = model 
+        self.make = make  # Атрибут make устанавливается в значение параметра make (производитель)
+        self.model = model  # Атрибут model устанавливается в значение параметра model (модель)
 
-
+    # Метод drive, который выводит строку с указанием того, что машина едет
     def drive(self):
-        print(f"Driving the {self.make} {self.model}")
+        print(f"Driving the {self.make} {self.model}")  # Вывод сообщения о том, что машина едет
         
-
+# Создаем объект my_car класса Car с атрибутами 'Toyota' и 'Corolla'
 my_car = Car("Toyota", "Corolla")
 
+# Вызываем метод drive, который выводит сообщение в консоль
 my_car.drive()
 ```
 
@@ -69,37 +73,43 @@ my_car.drive()
 и получившийся вывод в консоль.
 
 ```python
+# Создаем класс Car (Машина)
 class Car:
-
+    # Метод __init__ является конструктором, который принимает параметры make (производитель) и model (модель)
     def __init__(self, make, model):
-        self.make = make 
-        self.model = model  
+        self.make = make  # Атрибут 'make' устанавливается в значение параметра make
+        self.model = model  # Атрибут 'model' устанавливается в значение параметра model
 
+    # Метод drive выводит сообщение о том, что машина едет
     def drive(self):
-        print(f"Driving the {self.make} {self.model}")  
+        print(f"Driving the {self.make} {self.model}")  # Выводим строку о движении машины
 
-
+# Создаем объект my_car класса Car, передавая "Toyota" как производителя и "Corolla" как модель
 my_car = Car("Toyota", "Corolla")
 
+# Вызываем метод drive для объекта my_car, который выводит сообщение, что машина едет
 my_car.drive()
 
 
+# Создаем класс ElectricCar (Электрическая машина), который наследуется от класса Car
 class ElectricCar(Car):
-
+    # Конструктор __init__ принимает три параметра: make, model и battery_capacity (емкость батареи)
     def __init__(self, make, model, battery_capacity):
-
+        # super() используется для вызова конструктора родительского класса Car
         super().__init__(make, model)
-        self.battery_capacity = battery_capacity 
+        self.battery_capacity = battery_capacity  # Атрибут 'battery_capacity' устанавливается значением параметра battery_capacity
 
-
+    # Метод charge выводит сообщение о том, что машина заряжается
     def charge(self):
-        print(f"Charging the {self.make} {self.model} with {self.battery_capacity} kWh") 
+        print(f"Charging the {self.make} {self.model} with {self.battery_capacity} kWh")  # Выводим строку о зарядке машины
 
-
+# Создаем объект my_electric_car класса ElectricCar, передавая "Tesla", "Model S" и емкость батареи 75 кВт·ч
 my_electric_car = ElectricCar("Tesla", "Model S", 75)
 
+# Вызываем метод drive для объекта my_electric_car, который выводит сообщение, что машина едет
 my_electric_car.drive()
 
+# Вызываем метод charge для объекта my_electric_car, который выводит сообщение, что машина заряжается
 my_electric_car.charge()
 ```
 
@@ -117,22 +127,26 @@ my_electric_car.charge()
 
 ```python
 class Car:
-    
+    # Конструктор класса, который принимает параметры make (производитель) и model (модель)
     def __init__(self, make, model):
-        self._make = make  
-        self.__model = model  
+        self._make = make  # Защищенный атрибут _make (производитель)
+        self.__model = model  # Приватный атрибут __model (модель)
         
-    
+    # Метод drive, который выводит информацию о том, что машина едет
     def drive(self):
-        print(f"Driving the {self._make} {self.__model}")  
+        print(f"Driving the {self._make} {self.__model}")  # Доступ к защищенному и приватному атрибутам внутри класса
         
-
+# Создаем объект my_car класса Car, передавая производителя 'Toyota' и модель 'Corolla'
 my_car = Car("Toyota", "Corolla")
 
+# Выводим значение защищенного атрибута _make
+print(my_car._make)  # Доступен снаружи, так как это защищенный атрибут
 
-print(my_car._make) 
-
+# Вызываем метод drive, который выводит сообщение о движении машины
 my_car.drive()
+
+# Попытка доступа к приватному атрибуту __model извне вызовет ошибку, поэтому эта строка закомментирована
+# print(my_car.__model)  # Ошибка! Приватный атрибут недоступен извне класса
 
 ```
 
@@ -151,36 +165,39 @@ my_car.drive()
 получившийся вывод в консоль.
 
 ```python
+# Создаем общий (базовый) класс Shape, который будет служить основой для всех фигур
 class Shape:
- 
+    # Метод area, который должен быть реализован в дочерних классах
     def area(self):
         pass
 
-
+# Создаем класс Rectangle, который наследуется от базового класса Shape
 class Rectangle(Shape):
-  
+    # Конструктор, который принимает ширину и высоту прямоугольника
     def __init__(self, width, height):
-        self.width = width  
-        self.height = height  
-
-
-    def area(self):
-        return self.width * self.height  
-
-
-class Circle(Shape):
-   
-    def __init__(self, radius):
-        self.radius = radius  
+        self.width = width  # Инициализируем атрибут ширины
+        self.height = height  # Инициализируем атрибут высоты
         
-    
+    # Метод area, который возвращает площадь прямоугольника
     def area(self):
-        return 3.14 * self.radius * self.radius  
+        return self.width * self.height  # Площадь прямоугольника = ширина * высота
 
+# Создаем класс Circle, который также наследуется от базового класса Shape
+class Circle(Shape):
+    # Конструктор, который принимает радиус круга
+    def __init__(self, radius):
+        self.radius = radius  # Инициализируем атрибут радиуса
+        
+    # Метод area, который возвращает площадь круга
+    def area(self):
+        return 3.14 * self.radius * self.radius  # Площадь круга = π * радиус^2
 
+# Создаем массив с фигурами — прямоугольником и кругом
 shapes = [Rectangle(5, 4), Circle(3)]
 
+# Используем цикл для вывода площади каждой фигуры
 for shape in shapes:
+    # Вызов метода area для каждой фигуры. Благодаря полиморфизму, метод работает для обоих типов.
     print(shape.area())
 ```
 
