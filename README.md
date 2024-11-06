@@ -157,13 +157,14 @@ class Cat(Mammal):
     
     
 dog = Dog()
-print(f"Dog is {dog.className}, but they say {dog.sounds} and their reaction is {dog.weight}")
+print(f"Dog is {dog.className}, but they say {dog.sounds} and their weight is {dog.weight}")
 cat = Cat()
-print(f"Cat is {cat.className}, but they say {cat.sounds} and their reaction is {cat.weight}")
+print(f"Cat is {cat.className}, but they say {cat.sounds} and their weight is {cat.weight}")
 ```
 
 ### Результат.
-![image](https://github.com/user-attachments/assets/eac518db-a26b-4335-9635-508501d137da)
+![image](https://github.com/user-attachments/assets/f5b66b34-b57d-4e68-9e94-bc28683c3f6b)
+
 
 
 
