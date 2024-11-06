@@ -147,23 +147,24 @@ class Mammal:
 class Dog(Mammal):
     species = 'canine'
     sounds = 'wow'
-    reaction_speed = "100 - 150 milliseconds"
+    weight = "1 kg - 40 kg"
     
     
 class Cat(Mammal):
     species = 'feline'
     sounds = 'meow'
-    reaction_speed = "20 - 70 milliseconds"
+    weight = "2 kg - 30 kg"
     
     
 dog = Dog()
-print(f"Dog is {dog.className}, but they say {dog.sounds} and their reaction is {dog.reaction_speed}")
+print(f"Dog is {dog.className}, but they say {dog.sounds} and their reaction is {dog.weight}")
 cat = Cat()
-print(f"Cat is {cat.className}, but they say {cat.sounds} and their reaction is {cat.reaction_speed}")
+print(f"Cat is {cat.className}, but they say {cat.sounds} and their reaction is {cat.weight}")
 ```
 
 ### Результат.
-![image](https://github.com/user-attachments/assets/9bad21f3-6523-491f-8329-5ee2f9da4eac)
+![image](https://github.com/user-attachments/assets/eac518db-a26b-4335-9635-508501d137da)
+
 
 
 ## Лабораторная работа №5
